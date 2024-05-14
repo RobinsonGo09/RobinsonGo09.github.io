@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenido {
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mostrador .fila {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mostrador .fila .item {
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+}
+
+.mostrador .fila .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mostrador .fila .item img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    max-height: 200px; /* Tamaño máximo de la imagen */
+    margin-bottom: 10px;
+}
+
+.mostrador .fila .item .descripcion,
+.mostrador .fila .item .precio {
+    color: #333;
+    font-size: 14px;
+}
+
+.mostrador .fila .item .precio {
+    font-weight: bold;
+    color: #f85151;
+}
+
+.seleccion {
+    width: 100%;
+    border: 1px solid #ccc;
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f0f0f0; /* Color de fondo cuando se selecciona */
+}
+
+.seleccion.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.info img {
+    width: 200px; /* Tamaño fijo de la imagen */
+    height: 200px; /* Tamaño fijo de la imagen */
+    margin-bottom: 20px;
+}
+
+.info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Reglas de medios para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .mostrador .fila .item {
+        width: calc(100% - 20px);
+    }
+}
